@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar onTabChange={handleTabChange} />  
+      <Sidebar data-aos="fade-right" onTabChange={handleTabChange} />  
       <div className="content">
         {activeTab === 'About' && <About />}  
         {activeTab === 'Skills' && <Skills />}  

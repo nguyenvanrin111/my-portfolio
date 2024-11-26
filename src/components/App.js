@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/App.css';
+import 'aos/dist/aos.css'; // Import CSS
+import AOS from 'aos'; // Import thư viện AOS
 import Sidebar from './Sidebar';
 import About from './About';
 import Skills from './Skills';
@@ -10,6 +12,12 @@ import Certifications from './Certifications';  // Thêm component Certification
 function App() {
   const [activeTab, setActiveTab] = useState('About');  // Lưu trữ tab đang chọn
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   // Hàm để thay đổi tab khi click vào mục trong sidebar
   const handleTabChange = (tab) => {
     setActiveTab(tab);

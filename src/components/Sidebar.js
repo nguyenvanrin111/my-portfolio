@@ -11,7 +11,7 @@ const Sidebar = ({ onTabChange }) => {
 
   return (
     <div className="sidebar">
-      <img src="/avt.jpg" alt="profile" className="profile-pic" />
+      <img  src={process.env.PUBLIC_URL + "/avt.jpg"} alt="profile" className="profile-pic" />
       <ul className="menu">
         <li className={activeItem === 'About' ? 'active' : ''} onClick={() => handleClick('About')}>About</li>
         <li className={activeItem === 'Skills' ? 'active' : ''} onClick={() => handleClick('Skills')}>Skills</li>

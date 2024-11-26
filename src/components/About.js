@@ -1,14 +1,57 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import Typed from 'typed.js';
 import '../styles/About.css';
 
 const About = () => {
+
+  useEffect(() => {
+    const h1Options = {
+      strings: ["Hi There! I'm Nguyen Van Rin"],  
+      typeSpeed: 150,  // Tốc độ đánh máy (ms)
+      backSpeed: 50,   // Tốc độ quay lại (ms)
+      backDelay: 1000, // Thời gian delay trước khi quay lại (ms)
+      loop: false,     // Không lặp lại hiệu ứng
+      showCursor: false,
+    };
+    const typedH1 = new Typed('.typed-text', h1Options);
+
+    const h2Options = {
+      strings: ["Website Developer"],  
+      typeSpeed: 100,  // Tốc độ đánh máy (ms)
+      backSpeed: 50,   // Tốc độ quay lại (ms)
+      backDelay: 1000, // Thời gian delay trước khi quay lại (ms)
+      loop: false,     // Không lặp lại hiệu ứng
+      showCursor: false,
+    };
+    const typedH2 = new Typed('.typed-text-h2', h2Options);
+
+    const pOptions = {
+      strings: [
+        "Become a good Developer, with good expertise and basic knowledge of web design and development. Practice skills, develop qualities through work. Develop products, personal projects to build a brand. Desire to convey the experiences I have gained to young people with the same passion."
+      ],  
+      typeSpeed: 30,  // Tốc độ đánh máy (ms)
+      backSpeed: 25,  // Tốc độ quay lại (ms)
+      backDelay: 1000, // Thời gian delay trước khi quay lại (ms)
+      loop: false,    // Không lặp lại hiệu ứng
+      showCursor: false,
+    };
+    const typedP = new Typed('.typed-text-p', pOptions);
+
+    // Dọn dẹp khi component unmount
+    return () => {
+      typedH1.destroy();
+      typedH2.destroy();
+      typedP.destroy();
+    };
+  }, []);
+
   return (
     <div className='container_about'>
-      <div className="avt">
-        <img src="/avt.jpg"
+      <div data-aos="fade-right" className="avt">
+        <img src={process.env.PUBLIC_URL + "/avt.jpg"}
           alt="profile"
           className="profile-pic-about" />
-        <ul class="example-2">
+        <ul data-aos="fade-up" class="example-2">
           <li class="icon-content">
             <a
               data-social="linkedin"
@@ -76,17 +119,19 @@ const About = () => {
         </ul>
 
       </div>
-      <div className="about">
-        <h1>Hi There! I'm Nguyen Van Rin</h1>
-        <h2>Website Developer</h2>
-        <p>Become a good Developer, with good expertise and basic knowledge of web design and development. Practice skills, develop qualities through work. Develop products, personal projects to build a brand. Desire to convey the experiences I have gained to young people with the same passion. </p>
+      <div data-aos="fade-down-left" className="about">
+        <h1 className="typed-text" style={{textAlign:"center"}}></h1>
+        <h2 className="typed-text-h2"></h2>  
+        <div style={{width:"100%"}}>
+        <p className="typed-text-p"></p>
+        </div>
         <div className="info">
           <p><strong>Birthday:</strong>01-01-2001</p>
           <p><strong>Phone:</strong> 0362001404</p>
           <p><strong>Email:</strong> sep490.vanrin@gmail.com</p>
           <p><strong>From:</strong> Tân xã, Hòa Lạc, Thạch Thất, Hà Nội</p>
         </div>
-        <a href="/myCV.pdf" style={{textDecoration:"none"}} download="myCV.pdf">
+        <a href="/myCV.pdf" style={{ textDecoration: "none" }} download="myCV.pdf">
           <button className="button">
             <div className="dots_border"></div>
             <span className="text_button">Download MyCV</span>

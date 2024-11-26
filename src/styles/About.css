@@ -1,6 +1,9 @@
 .about {
   color: #c5c6c7;
   padding-left: 20px;
+  min-height: 20vh;         /* Chiều cao tối thiểu (20% chiều cao viewport) */
+  max-height: 100vh;        /* Đảm bảo chiều cao không vượt quá chiều cao viewport */
+  width: 100%;              /* Chiều rộng tự động thích ứng với màn hình */
 }
 
 .about h1 {
@@ -323,3 +326,32 @@ ul {
 .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ff0000;
 }
+
+
+
+/* Typing effect */
+.typed-text {
+  font-size: 2em;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap; /* Ngăn phần tử xuống dòng */
+  overflow: hidden;    /* Ẩn phần văn bản ngoài phạm vi */
+  border-right: 3px solid;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+  display: inline;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+

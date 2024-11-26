@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: #0b0c10;
+  color: #c5c6c7;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}

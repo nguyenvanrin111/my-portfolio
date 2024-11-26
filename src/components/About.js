@@ -6,7 +6,7 @@ const About = () => {
 
   useEffect(() => {
     const h1Options = {
-      strings: ["Hi There! I'm Nguyen Van Rin"],  
+      strings: ["Hi There! I'm Nguyen Van Rin"],
       typeSpeed: 150,  // Tốc độ đánh máy (ms)
       backSpeed: 50,   // Tốc độ quay lại (ms)
       backDelay: 1000, // Thời gian delay trước khi quay lại (ms)
@@ -16,7 +16,7 @@ const About = () => {
     const typedH1 = new Typed('.typed-text', h1Options);
 
     const h2Options = {
-      strings: ["Website Developer"],  
+      strings: ["Website Developer"],
       typeSpeed: 100,  // Tốc độ đánh máy (ms)
       backSpeed: 50,   // Tốc độ quay lại (ms)
       backDelay: 1000, // Thời gian delay trước khi quay lại (ms)
@@ -28,7 +28,7 @@ const About = () => {
     const pOptions = {
       strings: [
         "Become a good Developer, with good expertise and basic knowledge of web design and development. Practice skills, develop qualities through work. Develop products, personal projects to build a brand. Desire to convey the experiences I have gained to young people with the same passion."
-      ],  
+      ],
       typeSpeed: 30,  // Tốc độ đánh máy (ms)
       backSpeed: 25,  // Tốc độ quay lại (ms)
       backDelay: 1000, // Thời gian delay trước khi quay lại (ms)
@@ -120,10 +120,10 @@ const About = () => {
 
       </div>
       <div data-aos="fade-down-left" className="about">
-        <h1 className="typed-text" style={{textAlign:"center"}}></h1>
-        <h2 className="typed-text-h2"></h2>  
-        <div style={{width:"100%"}}>
-        <p className="typed-text-p"></p>
+        <h1 className="typed-text" style={{ textAlign: "center" }}></h1>
+        <h2 className="typed-text-h2"></h2>
+        <div style={{ width: "100%" }}>
+          <p className="typed-text-p"></p>
         </div>
         <div className="info">
           <p><strong>Birthday:</strong>01-01-2001</p>

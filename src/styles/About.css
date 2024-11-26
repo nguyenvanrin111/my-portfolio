@@ -355,3 +355,75 @@ ul {
   }
 }
 
+/* Media Queries */
+@media (max-width: 1200px) {
+  .avt {
+    width: 50%; /* Điều chỉnh kích thước ảnh cho màn hình vừa và nhỏ */
+  }
+
+  .about h1 {
+    font-size: 32px; /* Giảm kích thước chữ h1 trên màn hình vừa */
+  }
+
+  .about h2 {
+    font-size: 20px; /* Giảm kích thước chữ h2 trên màn hình vừa */
+  }
+}
+
+@media (max-width: 768px) {
+  .avt {
+    width: 60%; /* Làm cho ảnh chiếm 60% trên màn hình điện thoại */
+  }
+
+  .about {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about h1 {
+    font-size: 28px; /* Giảm kích thước chữ h1 trên điện thoại */
+  }
+
+  .about h2 {
+    font-size: 18px; /* Giảm kích thước chữ h2 trên điện thoại */
+  }
+
+  .info {
+    font-size: 14px; /* Giảm kích thước chữ trong thông tin */
+  }
+
+  .button {
+    padding: 0.8rem 1.5rem; /* Giảm kích thước button */
+  }
+}
+
+@media (max-width: 910px) {
+
+  .container_about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  .avt {
+    width: 80%; /* Làm cho ảnh chiếm 80% chiều rộng trên điện thoại nhỏ */
+    margin-bottom: 100px;
+  }
+
+  .about h1 {
+    font-size: 24px; /* Giảm kích thước chữ h1 */
+  }
+
+  .about h2 {
+    font-size: 16px; /* Giảm kích thước chữ h2 */
+  }
+
+  .info {
+    font-size: 12px; /* Giảm kích thước chữ trong thông tin */
+  }
+
+  .button {
+    padding: 0.6rem 1.2rem; /* Giảm kích thước button */
+  }
+}

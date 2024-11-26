@@ -4,6 +4,24 @@
     padding: 20px;
     text-align: center;
   }
+  /* Đảm bảo Sidebar hiển thị trên màn hình rộng */
+.sidebar {
+  display: block; /* Sidebar sẽ hiển thị theo mặc định */
+  width: 250px; /* Đặt kích thước cho Sidebar */
+  background-color: #1f2833; /* Màu nền của Sidebar */
+}
+
+/* Media Query để ẩn Sidebar khi chiều rộng màn hình nhỏ hơn 1060px */
+@media (max-width: 1060px) {
+  .sidebar {
+    display: none; /* Ẩn Sidebar khi màn hình nhỏ hơn 1060px */
+  }
+
+  .app {
+    flex-direction: column; /* Đảm bảo phần tử con được sắp xếp theo chiều dọc */
+  }
+}
+
   
   .profile-pic {
     border-radius: 50%;
@@ -42,4 +60,5 @@
     color: #66fcf1;
     border-radius: 8px;
   }
+  
   
